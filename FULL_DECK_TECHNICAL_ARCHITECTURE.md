@@ -6,6 +6,8 @@ This document defines the working technical architecture for Full Deck OS. It as
 
 Full Deck OS should orchestrate the best-fit business systems rather than rebuild every business function directly.
 
+Space Agent, rebranded and reshaped as Dealer's Table, is the agentic interface between the CEO and the Full Deck operating system. It is the CEO-facing command surface where business state, agent work, decisions, risks, widgets, and operating priorities become visible and interactive.
+
 The product should own:
 
 - the Prime Directive
@@ -89,6 +91,25 @@ Examples:
 - conversion of repeated agent work into Cloudflare Workers
 
 Full Deck should not become a clone of ERPNext. It should become the command and orchestration layer above ERPNext and other best-fit systems.
+
+## Space Agent / Dealer's Table Interface Layer
+
+The Space Agent fork should serve as the agentic interface layer for Full Deck OS.
+
+Its role is not merely to display dashboards. It should let the CEO interact with the operating system through natural language, widgets, agent-built tools, decision windows, and free-form table objects.
+
+Dealer's Table should:
+
+- translate CEO intent into Full Deck operating requests
+- expose current business state through widgets
+- let the CEO ask the Dealer to create custom widgets
+- surface decisions that require human authority
+- show risks, missing data, active work, and business maturity
+- let face-card actors and agents communicate with the CEO
+- provide the workspace where agent-built tools can appear, change, and mature
+- route approved actions into Cloudflare Worker skills, Jev decisions, Frappe records, or human follow-up
+
+In this architecture, the CEO should not need to directly operate D1, Workers, Frappe APIs, R2, Vectorize, or individual agent processes. Dealer's Table is the conversational and visual interface that makes those systems usable as one business operating system.
 
 ## Cloudflare As Deterministic Skill Layer
 
@@ -244,7 +265,7 @@ The default answer should be integration first, native build second.
 
 | Layer | Preferred Technology | Role |
 | --- | --- | --- |
-| CEO workspace | Dealer's Table / Space Agent fork | Front-facing command table and widget surface |
+| Agentic CEO interface | Dealer's Table / Space Agent fork | Conversational and visual command surface between the CEO and Full Deck OS |
 | Business application substrate | Frappe/ERPNext | Commodity ERP/CRM/business records and operational modules |
 | Deterministic skills | Cloudflare Workers | Mature business processes and integration actions |
 | Long-running processes | Cloudflare Workflows | Durable multi-step business processes |
