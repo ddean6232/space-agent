@@ -1,0 +1,102 @@
+# Full Deck Branding Audit
+
+This fork starts from `agent0ai/space-agent` and needs a full product identity pass before launch. The current repo is strongly branded around "Space Agent", Agent Zero, and a floating astronaut/helmet visual system.
+
+## Suggested Brand Direction
+
+- Move the product name away from "Space Agent" toward a Full Deck architecture concept. Strong candidates: `Full Deck OS`, `Full Deck Agentic OS`, `Full Deck Workspace`, or `Full Deck Architecture Studio`.
+- Replace the space/astronaut metaphor with a business architecture metaphor: deck, control room, operating layer, systems map, command table, or blueprint. Keep the "agent reshapes the workspace" idea, but make it feel like a business operating system rather than a space toy.
+- Use copy centered on Full Deck's offer: agentic business architecture, modular operations, workflow buildout, team knowledge, and execution systems.
+
+## Highest-Impact Rename Surfaces
+
+- `package.json`: package name, repository URL, Electron `appId`, `productName`, GitHub publish owner/repo, icon path, Linux maintainer.
+- `package-lock.json` and `packaging/package*.json`: package identity and packaging package name.
+- `README.md`: public positioning, launch links, social links, screenshots/banner, Agent Zero attribution, setup commands.
+- `.github/readme-banner*.svg|webp`, `.github/thumbnail.webp`, `.github/readme-try-live-now.svg`: public GitHub brand assets.
+- `server/pages/login.html`, `server/pages/enter.html`, `server/pages/share_space.html`, `server/pages/res/site.webmanifest`: browser/PWA title, meta, Open Graph, Twitter cards, install metadata, and launch visuals.
+- `server/pages/res/*favicon*`, `android-chrome-*`, `apple-touch-icon.png`, `readme-banner.webp`: public favicon, install icons, and social preview image.
+- `packaging/resources/icons/source/*`, `packaging/platforms/windows/icon.ico`, `packaging/platforms/linux/icons/*`: desktop app icon family.
+- `packaging/scripts/release-notes.js`, `packaging/scripts/release-assets-stage.js`, `packaging/release-asset-filters.yaml`: release notes title and installer asset names currently using `Space-Agent-*`.
+- `.github/workflows/release-desktop.yml`: release/publishing environment and artifact assumptions.
+
+## Mascot and Visual System
+
+Current astronaut/helmet assets appear in:
+
+- `server/pages/res/astronaut_no_bg.webp`
+- `server/pages/res/astronaut_green_bg.png`
+- `app/L0/_all/mod/_core/visual/res/chat/admin/*`
+- `app/L0/_all/mod/_core/visual/res/chat/overlay/*`
+- `app/L0/_all/mod/_core/visual/res/engineer/*`
+- `packaging/resources/icons/source/space-agent-icon-*`
+
+Recommended replacement approach:
+
+- Replace the floating astronaut overlay with a restrained Full Deck assistant mark, such as a deck-card glyph, control-node symbol, architectural compass, or small abstract operator icon.
+- Replace the helmet favicon/app icon with a scalable Full Deck product mark.
+- Redesign the starfield login/enter background into something more business-architecture native: blueprint grid, layered systems map, modular cards, process lanes, or control-room topology.
+- Keep image dimensions and filenames stable at first if speed matters, then rename paths after the visual replacement works.
+
+## Runtime and Product Copy
+
+Current in-app wording to rewrite:
+
+- `app/L0/_all/mod/_core/agent/view.html`: visible "Space Agent" info card and repo CTA.
+- `app/L0/_all/mod/_core/dashboard_welcome/dashboard-welcome.js`: resource links for GitHub, DeepWiki, Agent Zero, Discord, YouTube, X.
+- `app/L0/_all/mod/_core/admin/views/dashboard/panel.html`: admin-mode copy references Space Agent.
+- `commands/lib/supervisor/http_proxy.js`: runtime error messages say "Space Agent server".
+- `server/lib/customware/git_history.js`: default Git author is "Space Agent".
+- `app/L0/_all/mod/_core/spaces/ext/js/_core/onscreen_agent/llm.js/buildOnscreenAgentSystemPromptSections/end/current-space.js`: section label says "Current Space Agent Instructions".
+
+## Docs and Agent Instructions
+
+The repo contains many `AGENTS.md` and documentation files that encode the product language. These should be updated after the first visible rebrand so future agents maintain the new direction.
+
+Primary docs to revise first:
+
+- `server/pages/AGENTS.md`
+- `app/L0/_all/mod/_core/visual/AGENTS.md`
+- `app/L0/_all/mod/_core/agent/AGENTS.md`
+- `app/L0/_all/mod/_core/dashboard_welcome/AGENTS.md`
+- `app/L0/_all/mod/_core/documentation/docs/server/request-flow-and-pages.md`
+- `app/L0/_all/mod/_core/documentation/docs/agent/onscreen-agent-runtime.md`
+- `app/L0/_all/mod/_core/documentation/docs/app/admin-agent-runtime.md`
+- `app/L0/_all/mod/_core/documentation/docs/app/spaces-and-widgets.md`
+
+## Onboarding and Demos
+
+The bundled examples are currently generic and include Agent Zero references.
+
+- Replace `Agent Zero Videos` with a Full Deck demo space, such as `Architecture Studio`, `Operating Cadence`, or `Client Delivery Hub`.
+- Replace the "all games generated by Space Agent" marquee in retro arcade examples if those demos remain.
+- Consider replacing crypto/news/game presets with business-first examples: lead intake, SOP builder, client workspace, content ops, offer architecture, and automation planner.
+
+## URLs and Hosted Services
+
+Current URLs and domains to replace or decide intentionally:
+
+- `https://space-agent.ai`
+- `https://share.space-agent.ai`
+- `https://github.com/agent0ai/space-agent`
+- `https://deepwiki.com/agent0ai/space-agent`
+- `https://agent-zero.ai`
+- `https://x.com/Agent0ai`
+- `https://www.youtube.com/@AgentZeroFW`
+- `https://discord.gg/B8KZKNsPpj`
+
+## Implementation Order
+
+1. Decide final product name, repo slug, app ID, domain, and short positioning line.
+2. Replace visible public surfaces: README, login/enter/share pages, manifest, social metadata, dashboard welcome links, and agent info page.
+3. Replace artwork: favicon/app icon, public banner/social card, login art, overlay assistant avatar, and admin avatars.
+4. Update desktop packaging and release naming, including app ID, product name, updater publish target, release asset names, and maintainer.
+5. Replace default hosted/share URLs and social/resource links.
+6. Update docs and AGENTS files so future agent work preserves the Full Deck brand language.
+7. Run focused tests/builds for server pages, packaging scripts, release-note generation, and desktop packaging metadata.
+
+## Suggested Full Deck Positioning Copy
+
+Short: `Full Deck OS turns scattered business workflows into agent-ready operating systems.`
+
+Longer: `Full Deck OS is an agentic business architecture workspace for mapping, building, and running the systems behind a company: offers, processes, knowledge, automations, and team workflows.`
