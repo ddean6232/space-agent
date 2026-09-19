@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Full Deck OS And Dealer's Table Architecture",
+    "output": "full-deck-os-architecture.html",
+    "quality_profile": "showcase",
+    "viewBox": [1360, 860],
+    "views": [
+      {
+        "id": "executive-command",
+        "label": "Executive command",
+        "focus": ["ceo", "dealersTable", "starterWidgets", "decisionQueue"],
+        "note": "The CEO supervises the company through a free-form command table."
+      },
+      {
+        "id": "agent-workforce",
+        "label": "Agent workforce",
+        "focus": ["dealer", "agentOrchestrator", "businessAgents", "buildCadence"],
+        "note": "The Dealer sequences focused campaigns instead of waking every agent at once."
+      },
+      {
+        "id": "data-maturity",
+        "label": "Data maturity",
+        "focus": ["dataMaturity", "businessSources", "riskEngine", "systemLayers"],
+        "note": "Missing or weak data becomes risk, action, and integration work."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "ceo",
+      "type": "external",
+      "label": "CEO",
+      "pos": [90, 360],
+      "size": [150, 72],
+      "tag": "Approves"
+    },
+    {
+      "id": "dealersTable",
+      "type": "frontend",
+      "label": "Dealer's Table",
+      "pos": [280, 310],
+      "size": [190, 90],
+      "tag": "UI"
+    },
+    {
+      "id": "starterWidgets",
+      "type": "frontend",
+      "label": "CEO Widgets",
+      "pos": [280, 500],
+      "size": [190, 82],
+      "tag": "Movable"
+    },
+    {
+      "id": "fullDeckOS",
+      "type": "backend",
+      "label": "Full Deck OS",
+      "pos": [560, 330],
+      "size": [180, 80],
+      "tag": "Commander"
+    },
+    {
+      "id": "dealer",
+      "type": "backend",
+      "label": "Dealer",
+      "pos": [560, 150],
+      "size": [180, 76],
+      "tag": "Deals work"
+    },
+    {
+      "id": "agentOrchestrator",
+      "type": "messagebus",
+      "label": "Agent Orchestrator",
+      "pos": [820, 150],
+      "size": [190, 76],
+      "tag": "Cadence"
+    },
+    {
+      "id": "businessAgents",
+      "type": "backend",
+      "label": "Business Agents",
+      "pos": [1080, 130],
+      "size": [180, 86],
+      "tag": "Roles"
+    },
+    {
+      "id": "buildCadence",
+      "type": "messagebus",
+      "label": "Build Cadence",
+      "pos": [820, 330],
+      "size": [190, 80],
+      "tag": "Throttle"
+    },
+    {
+      "id": "decisionQueue",
+      "type": "security",
+      "label": "Decision Queue",
+      "pos": [1080, 335],
+      "size": [180, 84],
+      "tag": "Authority"
+    },
+    {
+      "id": "riskEngine",
+      "type": "security",
+      "label": "Risk Engine",
+      "pos": [850, 535],
+      "size": [190, 82],
+      "tag": "Signal"
+    },
+    {
+      "id": "dataMaturity",
+      "type": "database",
+      "label": "Data Maturity Ledger",
+      "pos": [545, 545],
+      "size": [180, 82],
+      "tag": "Confidence"
+    },
+    {
+      "id": "businessSources",
+      "type": "external",
+      "label": "Business Sources",
+      "pos": [280, 685],
+      "size": [190, 76],
+      "tag": "Inputs"
+    },
+    {
+      "id": "systemLayers",
+      "type": "database",
+      "label": "System Layers",
+      "pos": [790, 685],
+      "size": [180, 76],
+      "tag": "State"
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Full Deck OS Runtime",
+      "wraps": ["fullDeckOS", "dealer", "agentOrchestrator", "businessAgents", "buildCadence", "decisionQueue", "riskEngine", "dataMaturity", "systemLayers"],
+      "pad": 28
+    },
+    {
+      "kind": "security-group",
+      "label": "Human authority boundary",
+      "wraps": ["ceo", "decisionQueue"],
+      "pad": 22
+    }
+  ],
+  "connections": [
+    {
+      "id": "ceo-to-table",
+      "from": "ceo",
+      "to": "dealersTable",
+      "label": "supervises",
+      "variant": "emphasis",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 84
+    },
+    {
+      "id": "table-to-widgets",
+      "from": "dealersTable",
+      "to": "starterWidgets",
+      "label": "arranges widgets",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 28
+    },
+    {
+      "id": "table-to-os",
+      "from": "dealersTable",
+      "to": "fullDeckOS",
+      "label": "commands and context",
+      "variant": "emphasis",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 58
+    },
+    {
+      "id": "dealer-to-os",
+      "from": "dealer",
+      "to": "fullDeckOS",
+      "label": "deals operating cards",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 28
+    },
+    {
+      "id": "dealer-to-orchestrator",
+      "from": "dealer",
+      "to": "agentOrchestrator",
+      "label": "opens campaigns",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "orchestrator-to-agents",
+      "from": "agentOrchestrator",
+      "to": "businessAgents",
+      "label": "assigns roles",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 58
+    },
+    {
+      "id": "orchestrator-to-cadence",
+      "from": "agentOrchestrator",
+      "to": "buildCadence",
+      "label": "limits concurrency",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 28
+    },
+    {
+      "id": "cadence-to-decision",
+      "from": "buildCadence",
+      "to": "decisionQueue",
+      "label": "escalates only CEO decisions",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 78
+    },
+    {
+      "id": "sources-to-maturity",
+      "from": "businessSources",
+      "to": "dataMaturity",
+      "label": "manual, extracted, connected",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "maturity-to-risk",
+      "from": "dataMaturity",
+      "to": "riskEngine",
+      "label": "missing data becomes risk",
+      "variant": "security",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": -48
+    },
+    {
+      "id": "risk-to-cadence",
+      "from": "riskEngine",
+      "to": "buildCadence",
+      "label": "prioritizes build cards",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "maturity-to-layers",
+      "from": "dataMaturity",
+      "to": "systemLayers",
+      "label": "stores state",
+      "fromSide": "bottom",
+      "toSide": "left",
+      "labelDy": 78
+    }
+  ]
+}

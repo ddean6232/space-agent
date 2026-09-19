@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dealer's Table Concept Mockups</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --felt: #143d31;
+        --felt-deep: #09261f;
+        --ink: #eef7ef;
+        --muted: #a8b8ad;
+        --line: rgba(227, 232, 216, 0.16);
+        --panel: rgba(16, 22, 21, 0.82);
+        --panel-strong: rgba(23, 31, 29, 0.94);
+        --amber: #e9c46a;
+        --mint: #7bd9ad;
+        --cyan: #8fd3e8;
+        --rose: #e87070;
+        --violet: #a99cf5;
+        --blue: #6fa8ff;
+        --shadow: 0 24px 90px rgba(0, 0, 0, 0.36);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background: #06110f;
+        color: var(--ink);
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+      }
+
+      .mockup {
+        position: relative;
+        width: 1600px;
+        height: 1000px;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 15% 12%, rgba(123, 217, 173, 0.16), transparent 28%),
+          radial-gradient(circle at 82% 8%, rgba(233, 196, 106, 0.12), transparent 24%),
+          radial-gradient(circle at 68% 82%, rgba(111, 168, 255, 0.10), transparent 24%),
+          linear-gradient(145deg, #0a201b, var(--felt) 42%, var(--felt-deep));
+        isolation: isolate;
+      }
+
+      .mockup::before {
+        content: "";
+        position: absolute;
+        inset: 34px;
+        border: 1px solid rgba(234, 226, 190, 0.18);
+        border-radius: 34px;
+        box-shadow:
+          inset 0 0 0 1px rgba(0, 0, 0, 0.38),
+          inset 0 0 80px rgba(0, 0, 0, 0.28);
+        opacity: 0.85;
+        pointer-events: none;
+      }
+
+      .mockup::after {
+        content: "";
+        position: absolute;
+        inset: 92px 110px;
+        background:
+          linear-gradient(90deg, transparent 0 23%, rgba(255, 255, 255, 0.08) 23.1% 23.3%, transparent 23.4% 50%, rgba(255, 255, 255, 0.08) 50.1% 50.3%, transparent 50.4% 76%, rgba(255, 255, 255, 0.08) 76.1% 76.3%, transparent 76.4%),
+          linear-gradient(0deg, transparent 0 31%, rgba(255, 255, 255, 0.07) 31.1% 31.3%, transparent 31.4% 68%, rgba(255, 255, 255, 0.07) 68.1% 68.3%, transparent 68.4%);
+        border-radius: 42px;
+        opacity: 0.32;
+        pointer-events: none;
+      }
+
+      .scene {
+        display: none;
+        position: absolute;
+        inset: 0;
+        padding: 54px 62px;
+      }
+
+      .scene.is-active {
+        display: block;
+      }
+
+      .topbar {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .mark {
+        width: 58px;
+        height: 58px;
+        border-radius: 16px;
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.16), transparent),
+          #0e332a;
+        border: 1px solid rgba(240, 226, 190, 0.26);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        padding: 10px;
+        box-shadow: var(--shadow);
+      }
+
+      .mark span {
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.26);
+        background: rgba(233, 196, 106, 0.22);
+      }
+
+      .brand h1 {
+        margin: 0;
+        font-size: 33px;
+        line-height: 1.05;
+        font-weight: 740;
+        letter-spacing: 0;
+      }
+
+      .brand p,
+      .status-strip {
+        margin: 6px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .status-strip {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        padding: 6px 11px;
+        border-radius: 999px;
+        background: rgba(7, 14, 13, 0.54);
+        border: 1px solid rgba(235, 232, 209, 0.14);
+        color: #dbe5dd;
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .table {
+        position: relative;
+        z-index: 2;
+        height: 820px;
+        margin-top: 34px;
+      }
+
+      .widget {
+        position: absolute;
+        border-radius: 18px;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 34%),
+          var(--panel);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .widget::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0.08);
+        pointer-events: none;
+      }
+
+      .widget-header {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 20px 22px 12px;
+      }
+
+      .widget-title {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 720;
+        letter-spacing: 0;
+      }
+
+      .widget-sub {
+        margin: 5px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .tag {
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: #e7efe7;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .tag.hot {
+        color: #ffe8a8;
+        background: rgba(233, 196, 106, 0.12);
+        border-color: rgba(233, 196, 106, 0.34);
+      }
+
+      .tag.risk {
+        color: #ffd0d0;
+        background: rgba(232, 112, 112, 0.12);
+        border-color: rgba(232, 112, 112, 0.34);
+      }
+
+      .widget-body {
+        padding: 0 22px 22px;
+      }
+
+      .metric-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      .metric {
+        min-height: 88px;
+        border-radius: 14px;
+        padding: 14px;
+        background: rgba(0, 0, 0, 0.22);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .metric .value {
+        font-size: 25px;
+        font-weight: 760;
+        margin-bottom: 6px;
+      }
+
+      .metric .label {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .decision-card,
+      .list-card {
+        border-radius: 14px;
+        padding: 14px 15px;
+        background: rgba(0, 0, 0, 0.22);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        margin-top: 10px;
+      }
+
+      .decision-card strong,
+      .list-card strong {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      .decision-card p,
+      .list-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .actions {
+        display: flex;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .button {
+        border: 0;
+        border-radius: 10px;
+        min-height: 32px;
+        padding: 7px 11px;
+        color: #08120f;
+        font-weight: 720;
+        background: var(--mint);
+        font-size: 12px;
+      }
+
+      .button.secondary {
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.10);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .risk-chart {
+        position: relative;
+        height: 176px;
+        border-radius: 14px;
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+          linear-gradient(0deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+          rgba(0, 0, 0, 0.20);
+        background-size: 70px 52px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        overflow: hidden;
+      }
+
+      .bubble {
+        position: absolute;
+        width: var(--s);
+        height: var(--s);
+        left: var(--x);
+        bottom: var(--y);
+        border-radius: 50%;
+        background: color-mix(in oklab, var(--c), white 6%);
+        border: 1px solid rgba(255, 255, 255, 0.36);
+        box-shadow: 0 0 0 8px color-mix(in oklab, var(--c), transparent 78%);
+      }
+
+      .axis-label {
+        position: absolute;
+        color: rgba(238, 247, 239, 0.58);
+        font-size: 11px;
+      }
+
+      .agent-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .agent {
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        gap: 10px;
+        align-items: center;
+        padding: 12px;
+        border-radius: 14px;
+        background: rgba(0, 0, 0, 0.20);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .avatar {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        color: #07120f;
+      }
+
+      .agent strong {
+        display: block;
+        font-size: 13px;
+      }
+
+      .agent span {
+        display: block;
+        color: var(--muted);
+        font-size: 11px;
+        margin-top: 2px;
+      }
+
+      .priority-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .priority {
+        display: grid;
+        grid-template-columns: 34px 1fr auto;
+        align-items: center;
+        gap: 12px;
+        padding: 12px;
+        border-radius: 14px;
+        background: rgba(0, 0, 0, 0.22);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .rank {
+        width: 32px;
+        height: 32px;
+        border-radius: 9px;
+        display: grid;
+        place-items: center;
+        background: rgba(233, 196, 106, 0.16);
+        border: 1px solid rgba(233, 196, 106, 0.28);
+        color: #ffe6a3;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .priority strong {
+        display: block;
+        font-size: 13px;
+      }
+
+      .priority span {
+        display: block;
+        color: var(--muted);
+        font-size: 11px;
+        margin-top: 2px;
+      }
+
+      .confidence {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .bar {
+        width: 82px;
+        height: 8px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.10);
+        overflow: hidden;
+      }
+
+      .bar span {
+        display: block;
+        height: 100%;
+        width: var(--w);
+        background: var(--c);
+      }
+
+      .w-pulse { left: 32px; top: 16px; width: 520px; height: 238px; }
+      .w-decisions { right: 32px; top: 16px; width: 520px; height: 302px; }
+      .w-priorities { left: 402px; top: 296px; width: 552px; height: 292px; }
+      .w-agents { left: 32px; bottom: 26px; width: 500px; height: 294px; }
+      .w-risk { right: 32px; bottom: 26px; width: 532px; height: 330px; }
+
+      .scene-decision .table,
+      .scene-maturity .table {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 26px;
+        height: 812px;
+      }
+
+      .focus-panel {
+        position: relative;
+        border-radius: 24px;
+        background: rgba(10, 15, 14, 0.64);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: var(--shadow);
+        padding: 24px;
+        overflow: hidden;
+      }
+
+      .focus-panel h2 {
+        margin: 0 0 8px;
+        font-size: 30px;
+      }
+
+      .focus-panel > p {
+        margin: 0 0 20px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .detail-grid {
+        display: grid;
+        gap: 12px;
+      }
+
+      .large-card {
+        border-radius: 18px;
+        padding: 18px;
+        background: var(--panel-strong);
+        border: 1px solid rgba(255, 255, 255, 0.11);
+      }
+
+      .large-card h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+
+      .large-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.5;
+        font-size: 13px;
+      }
+
+      .maturity-rail {
+        display: grid;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .stage {
+        display: grid;
+        grid-template-columns: 150px 1fr 86px;
+        gap: 14px;
+        align-items: center;
+        padding: 14px;
+        border-radius: 15px;
+        background: rgba(0, 0, 0, 0.20);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .stage strong {
+        font-size: 13px;
+      }
+
+      .stage span {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .footnote {
+        position: absolute;
+        right: 62px;
+        bottom: 28px;
+        z-index: 3;
+        color: rgba(238, 247, 239, 0.58);
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="mockup">
+      <section class="scene scene-overview" data-scene="overview">
+        <header class="topbar">
+          <div class="brand">
+            <div class="mark" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <div>
+              <h1>Dealer's Table</h1>
+              <p>Full Deck OS command table for an agent-run business</p>
+            </div>
+          </div>
+          <div class="status-strip">
+            <span class="pill">Opening deal: 5 widgets</span>
+            <span class="pill">Build cadence: 3 active cards</span>
+            <span class="pill">CEO decisions: 2 pending</span>
+          </div>
+        </header>
+
+        <div class="table">
+          <article class="widget w-pulse">
+            <div class="widget-header">
+              <div>
+                <h2 class="widget-title">Company Pulse</h2>
+                <p class="widget-sub">Health snapshot with maturity confidence</p>
+              </div>
+              <span class="tag">74% known</span>
+            </div>
+            <div class="widget-body">
+              <div class="metric-row">
+                <div class="metric"><div class="value">$218k</div><div class="label">30-day pipeline</div></div>
+                <div class="metric"><div class="value">82%</div><div class="label">delivery health</div></div>
+                <div class="metric"><div class="value">11</div><div class="label">open loops</div></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="widget w-decisions">
+            <div class="widget-header">
+              <div>
+                <h2 class="widget-title">Decision Required</h2>
+                <p class="widget-sub">Only decisions that need human authority</p>
+              </div>
+              <span class="tag hot">2 now</span>
+            </div>
+            <div class="widget-body">
+              <div class="decision-card">
+                <strong>Approve hiring a part-time fulfillment coordinator?</strong>
+                <p>Ops Agent recommends yes if cash forecast can be validated by Friday.</p>
+                <div class="actions"><button class="button">Approve</button><button class="button secondary">Defer</button></div>
+              </div>
+              <div class="decision-card">
+                <strong>Accept risk: client onboarding SOP is incomplete</strong>
+                <p>Delivery can proceed, but missing handoff data increases rework probability.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="widget w-priorities">
+            <div class="widget-header">
+              <div>
+                <h2 class="widget-title">Dealt Priorities</h2>
+                <p class="widget-sub">The current hand from the Dealer</p>
+              </div>
+              <span class="tag">next 3</span>
+            </div>
+            <div class="widget-body priority-list">
+              <div class="priority"><div class="rank">1</div><div><strong>Build cash forecast baseline</strong><span>Finance Agent needs bank export and payables list</span></div><div class="confidence"><div class="bar"><span style="--w:42%;--c:var(--amber)"></span></div>42%</div></div>
+              <div class="priority"><div class="rank">2</div><div><strong>Document client delivery handoff</strong><span>Delegate to internal delivery owner</span></div><div class="confidence"><div class="bar"><span style="--w:58%;--c:var(--cyan)"></span></div>58%</div></div>
+              <div class="priority"><div class="rank">3</div><div><strong>Connect sales pipeline source</strong><span>Integration card waiting on CRM credentials</span></div><div class="confidence"><div class="bar"><span style="--w:33%;--c:var(--rose)"></span></div>33%</div></div>
+            </div>
+          </article>
+
+          <article class="widget w-agents">
+            <div class="widget-header">
+              <div>
+                <h2 class="widget-title">Agent Activity</h2>
+                <p class="widget-sub">Company roles operating under cadence limits</p>
+              </div>
+              <span class="tag">6 active</span>
+            </div>
+            <div class="widget-body agent-grid">
+              <div class="agent"><div class="avatar" style="background:var(--mint)">F</div><div><strong>Finance</strong><span>waiting on records</span></div></div>
+              <div class="agent"><div class="avatar" style="background:var(--cyan)">O</div><div><strong>Ops</strong><span>mapping handoffs</span></div></div>
+              <div class="agent"><div class="avatar" style="background:var(--amber)">S</div><div><strong>Sales</strong><span>needs CRM access</span></div></div>
+              <div class="agent"><div class="avatar" style="background:var(--violet)">R</div><div><strong>Research</strong><span>briefing market risk</span></div></div>
+            </div>
+          </article>
+
+          <article class="widget w-risk">
+            <div class="widget-header">
+              <div>
+                <h2 class="widget-title">Risk Profile</h2>
+                <p class="widget-sub">Log-scaled impact, including missing-data risk</p>
+              </div>
+              <span class="tag risk">3 elevated</span>
+            </div>
+            <div class="widget-body">
+              <div class="risk-chart">
+                <span class="axis-label" style="left:16px;top:14px">Impact</span>
+                <span class="axis-label" style="right:16px;bottom:12px">Likelihood</span>
+                <i class="bubble" style="--x:72%;--y:72%;--s:42px;--c:var(--rose)"></i>
+                <i class="bubble" style="--x:48%;--y:54%;--s:32px;--c:var(--amber)"></i>
+                <i class="bubble" style="--x:27%;--y:36%;--s:24px;--c:var(--cyan)"></i>
+                <i class="bubble" style="--x:63%;--y:28%;--s:22px;--c:var(--violet)"></i>
+              </div>
+              <div class="list-card"><strong>Top risk: cash forecast unavailable</strong><p>Blocks hiring and spend decisions. Finance Agent owns the next build card.</p></div>
+            </div>
+          </article>
+        </div>
+        <div class="footnote">Concept mockup - intended direction, not implemented product UI</div>
+      </section>
+
+      <section class="scene scene-decision" data-scene="decision">
+        <header class="topbar">
+          <div class="brand">
+            <div class="mark" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <div><h1>Decision and Risk View</h1><p>The CEO sees authority, evidence, risk, and recommended action in one place.</p></div>
+          </div>
+          <div class="status-strip"><span class="pill">Decision confidence: medium</span><span class="pill">Human approval required</span></div>
+        </header>
+        <div class="table">
+          <section class="focus-panel">
+            <h2>Approve hiring a fulfillment coordinator?</h2>
+            <p>The Dealer recommends approval only after validating cash runway and delivery load.</p>
+            <div class="detail-grid">
+              <div class="large-card"><h3>Recommendation</h3><p>Approve a 90-day part-time trial if Finance Agent confirms the 13-week cash forecast and Ops Agent confirms 18+ hours/week of recurring fulfillment bottleneck.</p></div>
+              <div class="large-card"><h3>Evidence available</h3><p>Delivery backlog is documented. Cash forecast is not yet connected; current number is manually entered and 42% mature.</p></div>
+              <div class="large-card"><h3>CEO authority needed</h3><p>This creates a recurring cash obligation and changes service delivery capacity. The OS can advise, but the CEO accepts liability.</p></div>
+            </div>
+          </section>
+          <section class="focus-panel">
+            <h2>Risk profile</h2>
+            <p>Missing financial data is treated as a live risk, not a blank metric.</p>
+            <div class="risk-chart" style="height:360px">
+              <span class="axis-label" style="left:18px;top:14px">Log impact</span>
+              <span class="axis-label" style="right:18px;bottom:14px">Likelihood</span>
+              <i class="bubble" title="Cash runway unknown" style="--x:68%;--y:74%;--s:54px;--c:var(--rose)"></i>
+              <i class="bubble" title="Delivery bottleneck" style="--x:45%;--y:52%;--s:38px;--c:var(--amber)"></i>
+              <i class="bubble" title="CRM stale" style="--x:56%;--y:30%;--s:26px;--c:var(--cyan)"></i>
+            </div>
+            <div class="large-card" style="margin-top:14px"><h3>Next build card</h3><p>Finance Agent requests bank export, payables list, receivables aging, payroll obligations, and owner confirmation of recurring expenses.</p></div>
+          </section>
+        </div>
+        <div class="footnote">Concept mockup - CEO decision surface</div>
+      </section>
+
+      <section class="scene scene-maturity" data-scene="maturity">
+        <header class="topbar">
+          <div class="brand">
+            <div class="mark" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <div><h1>Data Maturity and Build Cadence</h1><p>The OS builds the business system step by step instead of overwhelming the CEO.</p></div>
+          </div>
+          <div class="status-strip"><span class="pill">Active build cards: 3</span><span class="pill">Deferred gaps: 17</span><span class="pill">Integrations pending: 4</span></div>
+        </header>
+        <div class="table">
+          <section class="focus-panel">
+            <h2>Maturity ledger</h2>
+            <p>Every business function gets a source, confidence level, owner, and next maturity step.</p>
+            <div class="maturity-rail">
+              <div class="stage"><strong>Cash forecast</strong><span>Manual number, source not verified</span><div class="tag risk">unknown</div></div>
+              <div class="stage"><strong>Delivery SOP</strong><span>Partial document plus internal owner interview</span><div class="tag hot">extracted</div></div>
+              <div class="stage"><strong>Sales pipeline</strong><span>CRM identified, credentials not connected</span><div class="tag">integrate</div></div>
+              <div class="stage"><strong>Client status</strong><span>Agent-maintained from notes and weekly reviews</span><div class="tag">validated</div></div>
+              <div class="stage"><strong>Agent throughput</strong><span>Native OS activity stream</span><div class="tag">monitored</div></div>
+            </div>
+          </section>
+          <section class="focus-panel">
+            <h2>Dealer build cadence</h2>
+            <p>The Dealer limits concurrent system-building work to match CEO and team capacity.</p>
+            <div class="detail-grid">
+              <div class="large-card"><h3>1. Critical now</h3><p>Build cash forecast baseline. Blocks hiring, spending, and runway decisions.</p></div>
+              <div class="large-card"><h3>2. Foundation</h3><p>Document client delivery handoff. Required before delivery automation can be trusted.</p></div>
+              <div class="large-card"><h3>3. Integrate</h3><p>Connect CRM or import latest pipeline export. Sales data is stale and only partly useful.</p></div>
+              <div class="large-card"><h3>Deferred</h3><p>Competitor monitor, content performance dashboard, and vendor renewal tracker wait until the core operating layer is stable.</p></div>
+            </div>
+          </section>
+        </div>
+        <div class="footnote">Concept mockup - maturity and prioritization system</div>
+      </section>
+    </main>
+    <script>
+      const params = new URLSearchParams(location.search);
+      const scene = params.get("scene") || "overview";
+      for (const el of document.querySelectorAll(".scene")) {
+        el.classList.toggle("is-active", el.dataset.scene === scene);
+      }
+    </script>
+  </body>
+</html>
