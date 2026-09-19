@@ -23,21 +23,41 @@ The system should start small but preserve the final architecture:
 - Jev provides structured decision judgment.
 - The CEO remains the human authority for liability-bearing decisions.
 
+Before product code changes begin, the minimum viable foundation must be satisfied. See `FULL_DECK_FOUNDATION_CHECKLIST.md`.
+
+The foundation gate requires:
+
+- Dealer's Table running locally.
+- Canonical project layout decided.
+- Cloudflare account selected and usable non-interactively.
+- ERPNext/Frappe development instance available.
+- Full Deck D1/R2/storage strategy defined.
+- Worker skill runtime strategy defined.
+- Jev access available or setup path clear.
+- Secrets strategy in place.
+- First vertical slice agreed.
+
 ## Phase 0: Architecture Baseline And Repo Organization
 
-Goal: make the project buildable, navigable, and ready for product development.
+Goal: make the project buildable, navigable, and foundationally ready for product development.
 
 Deliverables:
 
+- Complete the minimum viable foundation checklist.
 - Confirm the forked Space Agent repo is the working Dealer's Table codebase.
 - Keep architecture packets in the repo as first-class product specifications.
 - Decide where Full Deck-specific modules live inside the fork.
 - Decide how the empty `/Users/darren_dean/projects/full-deck-os` workspace should relate to the Space Agent fork and Cloudflare OS lab.
+- Confirm ERPNext/Frappe development runtime and API access.
+- Confirm Cloudflare account selection and resource naming.
+- Confirm Jev setup path.
+- Confirm secrets/environment strategy.
 - Create an implementation backlog from the current architecture docs.
 - Define local development commands for Dealer's Table, Cloudflare Workers, and Frappe/ERPNext integration experiments.
 
 Testable outcome:
 
+- Foundation checklist has decisions recorded or explicit blockers.
 - A developer can clone or open the project and understand the system direction from the Markdown architecture packets.
 - The local Dealer's Table app can still run after documentation and branding changes.
 
