@@ -11,6 +11,24 @@ This is a first-pass definition of the 52-card deck as an operating analogy for 
 - Deterministic jobs are not additional cards. They are standard processes created by Full Deck OS once the work is understood well enough to run predictably.
 - A company can be assessed by asking which cards are strong, weak, missing, delegated, automated, or risky.
 
+## Prime Directive
+
+Full Deck OS turns business intent into operating architecture.
+
+Given a principle, intention, opportunity, constraint, or desired outcome, the system should guide the CEO from the current state of the business into a mature, process-oriented company. The current state may be nothing more than an idea, or it may be an existing company with scattered SOPs, tribal knowledge, partial data, disconnected tools, and uneven operating discipline.
+
+The CEO states what the business should become, what problem it should solve, what principle it should follow, or what outcome it should produce. Full Deck OS interprets that intent through the one-deck model. Hearts considers relationships and trust. Diamonds considers value and money. Spades considers operations and execution. Clubs considers risk, strategy, and governance.
+
+Face cards are the primary actors that guide the build. They assess what exists, identify what is missing, expose risks, determine which decisions require CEO authority, and create the next practical steps. They should process work themselves when they can. When the work exceeds one face-card actor, benefits from parallel processing, needs a time-based package, or requires repeated cadence, the face cards may deal number-card work packages.
+
+Number cards are supporting capacity, not permanent departments. They help the face cards execute, research, collect, analyze, document, follow up, or repeat work until the system understands the work well enough to formalize it.
+
+The long-term goal is deterministic processing wherever possible. Once a repeated workflow is understood, stable, validated, and useful, Full Deck OS should convert it into a system job, automation, integration, checklist, policy, SOP, or other deterministic process. Agents then move upward: monitoring exceptions, improving the process, escalating risks, and guiding decisions.
+
+The system must not overwhelm the CEO by trying to build the entire business at once. It should prioritize the next useful build sequence by weighing risk, decision dependency, business value, data availability, implementation effort, and CEO attention required.
+
+The Dealer's Table is where the Prime Directive becomes visible. It should show the current state of the business, active decisions, major risks, agent activity, missing data, and the next build priorities. It should also let the CEO ask the Dealer to create custom widgets that answer specific operating questions or expose specific business views.
+
 ## Proposed Suits
 
 ### Hearts: Relationships And Trust
@@ -100,6 +118,8 @@ The deck can power several product mechanics:
 - Business assessment: score face-card actors and active number-card work packages by maturity, evidence, owner, and risk.
 - Agent assignment: face cards process work directly or delegate to number cards when more capacity or parallelism is needed.
 - Widget generation: create a widget from any card, such as `King of Hearts Relationship Risk` or `6 of Diamonds Cash Flow`.
+- Custom CEO-requested widgets: the CEO can ask the Dealer to create a widget for a specific view, metric, risk, decision, workflow, or operating question.
+- Agent-backed widget creation: the Dealer identifies the needed cards, agents, data sources, deterministic jobs, and integrations, then coordinates the work required to build and maintain the widget.
 - Build cadence: deal only the next few cards that matter instead of overwhelming the CEO.
 - Missing-data risk: if a card lacks evidence, the gap becomes a risk and an agent build card.
 - Deterministic conversion: once repeated work is understood, convert it from card/AI handling into deterministic jobs where possible.

@@ -25,6 +25,26 @@ The weak fit is the product wrapper:
 - playful first-run tone
 - public domain and release pipeline tied to `space-agent.ai` and `agent0ai/space-agent`
 
+## Prime Directive
+
+Full Deck OS exists to help a business owner or CEO turn a principle, intention, opportunity, constraint, or desired outcome into a fully functioning business operating system.
+
+The system should not merely answer questions, make recommendations, or display information. Its job is to guide the business from wherever it currently is, including nothing more than an idea, into a mature, process-oriented company with clear roles, accountable agents, reliable data, measured risks, repeatable workflows, and deterministic operating processes wherever deterministic processing is possible.
+
+The CEO begins by stating what they want the business to become, what they believe, what they are trying to accomplish, or what problem they want the business to solve. Full Deck OS interprets that intent through the full operating deck: relationships, money, operations, and risk. The face cards act as the primary business actors. They assess what exists, identify what is missing, expose risks, determine what decisions are required, and guide the CEO through the sequence of building the business architecture.
+
+The system must be sensitive to the current maturity of the company. A business with no SOPs, no clean data, and no connected systems should not be treated like a mature company with structured operations and validated reporting. Full Deck OS should recognize the difference between unknown, manual, partially documented, agent-researched, system-connected, validated, monitored, and optimized business functions. Missing data is not merely an inconvenience; it becomes a risk, a work item, and a priority decision.
+
+The face cards should do as much work as they can directly. When the work is too large, too specialized, too time-sensitive, too repetitive, or better handled in parallel, the face cards may deal number-card work packages. Those number cards are not separate departments or permanent actors. They are temporary or active capacity assigned to help the face cards move work forward through execution, research, collection, analysis, documentation, follow-up, or repeated cadence.
+
+The long-term direction is not to keep everything agentic forever. Full Deck OS should continuously look for work that can be made deterministic. Once a workflow becomes understood, stable, validated, and repeatable, it should be converted into a system job, automation, integration, checklist, policy, SOP, or other deterministic process. Agents should then move upward in the stack: supervising exceptions, monitoring outcomes, improving processes, escalating risk, and guiding decisions instead of repeatedly performing work the system can now handle predictably.
+
+The CEO should not be overwhelmed by the whole business all at once. Full Deck OS must prioritize. It should decide what needs attention now, what is foundational, what is a quick win, what can be delegated, what should be integrated, and what should wait. The system's responsibility is to sequence the buildout of the business operating system in a way that respects the CEO's available attention, the business's maturity, the urgency of risks, and the practical availability of data and resources.
+
+The Dealer's Table is the command surface where this guidance becomes visible. It should show the CEO the current state of the business, the active decisions, the highest risks, the work being handled by agents, the missing data, and the next priorities. It is not merely a dashboard. It is the workspace where the CEO participates in the business, approves direction, accepts human liability, and interacts with the agent-run operating architecture.
+
+In its mature form, Full Deck OS should become the commander and operating architecture of the business. The CEO remains the human owner, authority, contact point, and liability holder, but the business itself is increasingly run through structured agents, deterministic processes, validated data, escalation rules, and continuous improvement loops.
+
 ## Product Role In Full Deck OS
 
 Recommended role: `Full Deck OS` should be the operating layer. The forked Space Agent runtime becomes the execution substrate inside it.
@@ -116,7 +136,7 @@ Default templates should demonstrate Full Deck's business architecture promise.
 Full Deck OS should feel like a serious business operating surface:
 
 1. `Dealer's Table`: the main free-form command table where the CEO views, arranges, and asks agents to build operating widgets.
-2. `Decks`: reusable business architectures, departments, playbooks, workflows, or operating models.
+2. `One Business Deck`: the single operating deck for the company; departments, clients, products, campaigns, and maturity stages are views or filters over the same deck, not separate sub-decks.
 3. `Cards` or `Widgets`: free-form table objects, each a tool, data view, automation, document, browser surface, research brief, risk view, or decision window.
 4. `Dealer`: the orchestration intelligence that deals work, escalations, decisions, resources, and agent assignments onto the table.
 5. `Agents`: stand-ins for business functions or human roles, such as sales, ops, finance, support, delivery, research, compliance, and content.
@@ -129,6 +149,10 @@ Full Deck OS should feel like a serious business operating surface:
 Do not turn the front-facing interface into a fixed dashboard with permanent hard-coded zones. Space Agent's strongest native affordance is free-form widget creation and placement, so Dealer's Table should preserve that freedom.
 
 Launch should provide a curated starting table with CEO-grade widgets already dealt onto it, while letting the CEO and agents add, remove, move, resize, and rebuild widgets freely.
+
+The CEO should also be able to instruct the Dealer, or table agent, to create a custom widget for whatever view, metric, risk, decision, workflow, or operating question the CEO wants to see. The Dealer should interpret the request, determine what information is needed, identify which face cards, number-card work packages, deterministic jobs, data sources, or external integrations are required, and coordinate the agents necessary to gather, validate, and maintain that information.
+
+A custom widget should become a live business instrument on the Dealer's Table, not just a one-time answer. It should continue to provide the requested visibility, update from available data where possible, show uncertainty or missing information where the system is incomplete, and create agent work or risk items when the needed information does not yet exist.
 
 Recommended starting widgets:
 
