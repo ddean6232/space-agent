@@ -1,13 +1,14 @@
 # Full Deck OS 52-Card Operating Taxonomy
 
-This is a first-pass definition of the 52-card deck as an operating analogy for Full Deck OS. The deck is not decorative. Each card represents a business domain, responsibility, or operating force that can be assigned to agents, widgets, risks, decisions, data maturity work, and business architecture.
+This is a first-pass definition of the 52-card deck as an operating analogy for Full Deck OS. The deck is not decorative. Each business is one complete deck of cards. Cards represent actors, delegated work packages, capacity, risks, decisions, data maturity work, and business architecture.
 
 ## Core Model
 
 - The four suits represent major operating dimensions of a business.
-- The thirteen ranks represent maturity, authority, or responsibility levels inside each dimension.
-- Face cards represent accountable roles or executive-grade forces.
-- Number cards represent practical operating functions, assets, systems, and evidence.
+- Face cards are the primary actors of the business.
+- Number cards are played only when a face card needs extra capacity, parallel processing, a time-based work package, or repeated work support.
+- Work should move toward deterministic processes wherever possible; AI/card handling is for judgment, ambiguity, delegation, exception handling, and system-building until repeatable work can become a normal system job.
+- Deterministic jobs are not additional cards. They are standard processes created by Full Deck OS once the work is understood well enough to run predictably.
 - A company can be assessed by asking which cards are strong, weak, missing, delegated, automated, or risky.
 
 ## Proposed Suits
@@ -18,16 +19,16 @@ Hearts covers the human relationship layer: customers, partners, team, reputatio
 
 | Card | Definition |
 | --- | --- |
-| Ace of Hearts | Core promise and emotional reason customers choose the business |
-| 2 of Hearts | Customer segments and relationship types |
-| 3 of Hearts | Lead relationships and early trust-building |
-| 4 of Hearts | Client onboarding experience |
-| 5 of Hearts | Client communication cadence |
-| 6 of Hearts | Customer success and retention |
-| 7 of Hearts | Testimonials, referrals, and social proof |
-| 8 of Hearts | Partnerships and strategic alliances |
-| 9 of Hearts | Community, audience, and network effects |
-| 10 of Hearts | Brand reputation and public trust |
+| Ace of Hearts | Source principle for relationships: the promise and trust basis of the business |
+| 2 of Hearts | Relationship work package: two-party/customer touchpoint support |
+| 3 of Hearts | Relationship work package: early trust-building or lead nurture support |
+| 4 of Hearts | Relationship work package: onboarding or recurring communication support |
+| 5 of Hearts | Relationship work package: customer success follow-up support |
+| 6 of Hearts | Relationship work package: referral, testimonial, or reputation support |
+| 7 of Hearts | Relationship work package: audience/community support |
+| 8 of Hearts | Relationship work package: partner/alliance support |
+| 9 of Hearts | Relationship work package: high-volume relationship processing |
+| 10 of Hearts | Relationship work package: repeated relationship operations at scale |
 | Jack of Hearts | Relationship Agent: manages touchpoints, follow-ups, and relational intelligence |
 | Queen of Hearts | Culture and care: internal trust, morale, and customer empathy |
 | King of Hearts | Relationship authority: owns high-stakes relationships and reputational risk |
@@ -38,16 +39,16 @@ Diamonds covers financial value: offers, pricing, revenue, cash, margin, assets,
 
 | Card | Definition |
 | --- | --- |
-| Ace of Diamonds | Primary value proposition and economic engine |
-| 2 of Diamonds | Offer structure and packaging |
-| 3 of Diamonds | Pricing model |
-| 4 of Diamonds | Sales pipeline value |
-| 5 of Diamonds | Revenue forecast |
-| 6 of Diamonds | Cash flow and runway |
-| 7 of Diamonds | Cost structure and margin |
-| 8 of Diamonds | Accounts receivable and collections |
-| 9 of Diamonds | Financial reporting and scorecards |
-| 10 of Diamonds | Capital strategy, reinvestment, and growth capacity |
+| Ace of Diamonds | Source principle for money: the value engine of the business |
+| 2 of Diamonds | Value work package: offer/pricing support |
+| 3 of Diamonds | Value work package: sales pipeline support |
+| 4 of Diamonds | Value work package: revenue forecast support |
+| 5 of Diamonds | Value work package: cash-flow support |
+| 6 of Diamonds | Value work package: cost and margin support |
+| 7 of Diamonds | Value work package: receivables/collections support |
+| 8 of Diamonds | Value work package: reporting/scorecard support |
+| 9 of Diamonds | Value work package: investment or capital planning support |
+| 10 of Diamonds | Value work package: repeated financial operations at scale |
 | Jack of Diamonds | Finance Agent: gathers numbers, builds forecasts, and monitors financial signals |
 | Queen of Diamonds | Value design: ensures offers remain profitable, desirable, and well-packaged |
 | King of Diamonds | Financial authority: owns spend, pricing, runway, and capital risk |
@@ -58,16 +59,16 @@ Spades covers the work engine: digging, building, processes, delivery, SOPs, qua
 
 | Card | Definition |
 | --- | --- |
-| Ace of Spades | Core operating system and delivery model |
-| 2 of Spades | Intake and request handling |
-| 3 of Spades | SOP library and process documentation |
-| 4 of Spades | Task routing and ownership |
-| 5 of Spades | Delivery workflow |
-| 6 of Spades | Quality assurance and review |
-| 7 of Spades | Tool stack and internal systems |
-| 8 of Spades | Automation and handoffs |
-| 9 of Spades | Capacity planning and resource allocation |
-| 10 of Spades | Continuous improvement loop |
+| Ace of Spades | Source principle for operations: the delivery and execution engine |
+| 2 of Spades | Operations work package: intake/request support |
+| 3 of Spades | Operations work package: SOP/documentation support |
+| 4 of Spades | Operations work package: task routing and ownership support |
+| 5 of Spades | Operations work package: delivery workflow support |
+| 6 of Spades | Operations work package: quality assurance support |
+| 7 of Spades | Operations work package: tool/internal system support |
+| 8 of Spades | Operations work package: automation/handoff support |
+| 9 of Spades | Operations work package: capacity/resource support |
+| 10 of Spades | Operations work package: repeated execution at scale |
 | Jack of Spades | Operations Agent: coordinates execution, blockers, handoffs, and process upkeep |
 | Queen of Spades | Systems design: keeps workflows usable, documented, and scalable |
 | King of Spades | Execution authority: owns operational reliability and delivery risk |
@@ -78,16 +79,16 @@ Clubs covers strategy, risk, compliance, constraints, decisions, governance, and
 
 | Card | Definition |
 | --- | --- |
-| Ace of Clubs | Strategic objective and highest-order business constraint |
-| 2 of Clubs | Market position and competitive context |
-| 3 of Clubs | Legal, compliance, and contractual obligations |
-| 4 of Clubs | Data governance and source reliability |
-| 5 of Clubs | Risk register |
-| 6 of Clubs | Decision rights and approval thresholds |
-| 7 of Clubs | Security, privacy, and access control |
-| 8 of Clubs | Incident response and contingency plans |
-| 9 of Clubs | Strategic options and tradeoff analysis |
-| 10 of Clubs | Board-level or CEO-level operating review |
+| Ace of Clubs | Source principle for risk: highest-order constraint and strategic threat posture |
+| 2 of Clubs | Risk work package: market/competitive support |
+| 3 of Clubs | Risk work package: legal/compliance support |
+| 4 of Clubs | Risk work package: data governance/source reliability support |
+| 5 of Clubs | Risk work package: risk register support |
+| 6 of Clubs | Risk work package: decision-rights/approval support |
+| 7 of Clubs | Risk work package: security/privacy/access support |
+| 8 of Clubs | Risk work package: incident/contingency support |
+| 9 of Clubs | Risk work package: strategic option/tradeoff support |
+| 10 of Clubs | Risk work package: repeated governance and review at scale |
 | Jack of Clubs | Risk Agent: identifies exposure, missing data, and escalation paths |
 | Queen of Clubs | Governance design: turns constraints into usable policy and decision structure |
 | King of Clubs | Strategic authority: owns existential risk, major tradeoffs, and final escalation |
@@ -96,12 +97,12 @@ Clubs covers strategy, risk, compliance, constraints, decisions, governance, and
 
 The deck can power several product mechanics:
 
-- Business assessment: score each card by maturity, evidence, owner, and risk.
-- Agent assignment: assign agents to cards they operate or monitor.
+- Business assessment: score face-card actors and active number-card work packages by maturity, evidence, owner, and risk.
+- Agent assignment: face cards process work directly or delegate to number cards when more capacity or parallelism is needed.
 - Widget generation: create a widget from any card, such as `King of Hearts Relationship Risk` or `6 of Diamonds Cash Flow`.
 - Build cadence: deal only the next few cards that matter instead of overwhelming the CEO.
 - Missing-data risk: if a card lacks evidence, the gap becomes a risk and an agent build card.
-- Templates: business starter decks can preconfigure cards for different company types.
+- Deterministic conversion: once repeated work is understood, convert it from card/AI handling into deterministic jobs where possible.
 
 ## Starter Dealer's Table Mapping
 
@@ -110,17 +111,17 @@ The five starter widgets can map to the deck:
 - Company Pulse: summary across all suits.
 - Decision Required: primarily Clubs, with linked Hearts/Diamonds/Spades consequences.
 - Risk Profile: Clubs plus any weak/missing card from any suit.
-- Agent Activity: face cards and assigned operating cards.
+- Agent Activity: face-card actors and active number-card work packages.
 - Dealt Priorities: the current active hand selected by the Dealer.
 
 ## Settled Rank And Role Definitions
 
-The ranks do not mean the exact same thing across every suit. Each suit defines its own 2-through-10 operating domains, because relationships, money, execution, and risk have different practical anatomy.
+The ranks do not mean the exact same thing across every suit. Each suit defines its own 2-through-10 work-package patterns, because relationships, money, execution, and risk have different practical anatomy.
 
 The rank pattern still has a consistent feel:
 
 - Aces define the originating force of the suit.
-- 2-through-10 define the practical operating stack inside that suit.
+- 2-through-10 define supporting work packages inside that suit.
 - Jacks are active operators or agents.
 - Queens are design, care, stewardship, and system-quality roles.
 - Kings are authority, accountability, and escalation roles.
@@ -144,7 +145,7 @@ Jacks are active operating agents. They do work, gather information, follow up, 
 - Jack of Spades: Operations Agent.
 - Jack of Clubs: Risk Agent.
 
-Jacks can be software agents, human operators, or blended human-agent workflows. In Full Deck OS, the default interpretation is that Jacks are agentic operators unless a human is explicitly assigned.
+Jacks can process work themselves or delegate pieces of work to number cards when one agent cannot efficiently handle the volume, timing, specialization, or parallel processing requirement.
 
 ## Queens
 
@@ -184,18 +185,41 @@ Possible Joker uses:
 
 The Dealer can introduce a Joker when normal card logic is not enough.
 
-## Master Deck And Sub-Decks
+## One Business, One Deck
 
-A company should have one master deck that represents the whole business operating system. That master deck can spawn sub-decks for departments, clients, product lines, locations, campaigns, or maturity stages.
+A company has one deck. There are no sub-decks. Departments, clients, product lines, campaigns, locations, and maturity stages are views, filters, widgets, or contexts over the same business deck.
 
-The master deck preserves executive coherence. Sub-decks allow local detail.
+The single deck preserves executive coherence. The CEO and Dealer should always be able to understand the business as one operating system, even when a widget focuses on one client, department, or function.
 
 Examples:
 
-- Master Deck: whole company.
-- Sales Deck: pipeline, offers, relationship motions, and revenue cards.
-- Delivery Deck: SOPs, capacity, quality, and client outcomes.
-- Client Deck: one client relationship and delivery system.
-- Launch Deck: one campaign or product rollout.
+- Whole company: one complete deck.
+- Sales view: filters the one deck for Hearts/Diamonds cards involved in pipeline, offers, and relationship motions.
+- Delivery view: filters the one deck for Spades cards involved in SOPs, capacity, quality, and client outcomes.
+- Client view: filters the one deck for cards currently relevant to one client relationship and delivery system.
+- Launch view: filters the one deck for cards currently relevant to one campaign or product rollout.
 
-Sub-decks should map back to the master deck so the CEO can see how local work affects the whole business.
+No view should fork the deck. Views only arrange or focus the same underlying business cards.
+
+## Number Cards And Deterministic Jobs
+
+Number cards are not the default way work gets done. Most work should be handled by the appropriate face-card actor, then delegated to one or more number cards only when useful.
+
+Use number cards when:
+
+- work exceeds what one face-card agent can handle,
+- parallel processing would make the work faster or better,
+- time-based work packages are needed,
+- repeated work must run on a cadence,
+- a face card needs temporary supporting capacity,
+- a workflow is not yet mature enough to become deterministic.
+
+The long-term direction is deterministic processing. Once a repeated workflow is understood, validated, and stable, it should become a normal deterministic job in Full Deck OS rather than continuing to rely on AI/card handling. The card may still be used to monitor ownership, risk, escalation, or exceptions, but the processing itself should move into the system.
+
+Cards are therefore part of the operating transition:
+
+1. Face card handles judgment or ambiguous work.
+2. Number cards support capacity, repetition, timing, or parallelism.
+3. The system learns the pattern.
+4. Stable repeatable work becomes a deterministic job.
+5. Face cards monitor exceptions, risks, changes, and decisions.
