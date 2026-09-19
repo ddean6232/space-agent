@@ -115,13 +115,32 @@ Default templates should demonstrate Full Deck's business architecture promise.
 
 Full Deck OS should feel like a serious business operating surface:
 
-1. `Control Room`: main dashboard for workspaces, systems, recent changes, and team/client areas.
-2. `Decks`: rebranded spaces, each representing a business system, client hub, or workflow.
-3. `Cards` or `Blocks`: rebranded widgets, each a tool, data view, automation, document, or browser surface.
-4. `Architect`: the agent persona, focused on building, documenting, and improving business systems.
-5. `System Layers`: firmware, team templates, and user customization mapped from `L0/L1/L2`.
-6. `History`: rollback and audit trail as a first-class safety feature.
-7. `Templates`: curated business architecture starters replacing novelty demos.
+1. `Dealer's Table`: the main free-form command table where the CEO views, arranges, and asks agents to build operating widgets.
+2. `Decks`: reusable business architectures, departments, playbooks, workflows, or operating models.
+3. `Cards` or `Widgets`: free-form table objects, each a tool, data view, automation, document, browser surface, research brief, risk view, or decision window.
+4. `Dealer`: the orchestration intelligence that deals work, escalations, decisions, resources, and agent assignments onto the table.
+5. `Agents`: stand-ins for business functions or human roles, such as sales, ops, finance, support, delivery, research, compliance, and content.
+6. `System Layers`: firmware, team templates, and user customization mapped from `L0/L1/L2`.
+7. `History`: rollback and audit trail as a first-class safety feature.
+8. `Templates`: curated business architecture starters replacing novelty demos.
+
+## Dealer's Table Layout Decision
+
+Do not turn the front-facing interface into a fixed dashboard with permanent hard-coded zones. Space Agent's strongest native affordance is free-form widget creation and placement, so Dealer's Table should preserve that freedom.
+
+Launch should provide a curated starting table with CEO-grade widgets already dealt onto it, while letting the CEO and agents add, remove, move, resize, and rebuild widgets freely.
+
+Recommended starting widgets:
+
+- Company pulse: health metrics, priorities, and open loops.
+- Decision required: items that need human authority, approval, or liability acceptance.
+- Risk profile: business risks shown by likelihood, impact, trend, and escalation status; logarithmic scaling may help existential risks stand out.
+- Agent activity: active agents, responsibilities, blockers, completions, and next actions.
+- Research briefs: compact sourced context for decisions.
+- Architecture map: offers, departments, workflows, tools, automations, dependencies, and owners.
+- Dealt cards: highest-priority business objects currently in play.
+
+The visual style should be a command table first, with subtle card-table cues in the background: muted felt green, faint placement marks, restrained card geometry, and a serious executive dashboard foreground.
 
 ## Implementation Decisions
 
@@ -130,6 +149,7 @@ Phase 1 should change visible brand without deep runtime renames.
 - Keep internal repo path and JS runtime names while changing UI, docs, assets, and package metadata.
 - Change `productName`, `appId`, release artifact names, README, page metadata, icons, and public shell visuals before launch.
 - Replace default examples with business templates before showing the product to prospects.
+- Replace the first-run space with a curated Dealer's Table starter layout made from free-form CEO-grade widgets rather than a rigid fixed dashboard.
 - Keep compatibility references for `space.*` APIs in developer docs until a separate technical rename is justified.
 
 Phase 2 can rename technical concepts only if the product direction is stable.
