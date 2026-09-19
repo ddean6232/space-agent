@@ -113,9 +113,89 @@ The five starter widgets can map to the deck:
 - Agent Activity: face cards and assigned operating cards.
 - Dealt Priorities: the current active hand selected by the Dealer.
 
-## Open Questions
+## Settled Rank And Role Definitions
 
-- Should ranks always mean the same maturity level across suits, or should each suit define rank-specific domains as above?
-- Should face cards map to persistent agent roles, human executives, or both?
-- Should Jokers exist outside the 52-card model for disruption, opportunity, or unknown unknowns?
-- Should a company have one master deck, or multiple decks by department, client, product line, or stage?
+The ranks do not mean the exact same thing across every suit. Each suit defines its own 2-through-10 operating domains, because relationships, money, execution, and risk have different practical anatomy.
+
+The rank pattern still has a consistent feel:
+
+- Aces define the originating force of the suit.
+- 2-through-10 define the practical operating stack inside that suit.
+- Jacks are active operators or agents.
+- Queens are design, care, stewardship, and system-quality roles.
+- Kings are authority, accountability, and escalation roles.
+- Jokers sit outside the 52-card operating model as wildcards.
+
+## Aces
+
+Aces are the seed or source card of each suit. They define the core force that everything else in that suit unfolds from.
+
+- Ace of Hearts: core promise and emotional reason customers choose the business.
+- Ace of Diamonds: primary value proposition and economic engine.
+- Ace of Spades: core operating system and delivery model.
+- Ace of Clubs: strategic objective and highest-order business constraint.
+
+## Jacks
+
+Jacks are active operating agents. They do work, gather information, follow up, coordinate, and keep their suit moving.
+
+- Jack of Hearts: Relationship Agent.
+- Jack of Diamonds: Finance Agent.
+- Jack of Spades: Operations Agent.
+- Jack of Clubs: Risk Agent.
+
+Jacks can be software agents, human operators, or blended human-agent workflows. In Full Deck OS, the default interpretation is that Jacks are agentic operators unless a human is explicitly assigned.
+
+## Queens
+
+Queens are stewardship and design roles. They protect quality, coherence, trust, and the health of the system. They are not merely assistants to Kings; they own the shape and integrity of their suit.
+
+- Queen of Hearts: culture, care, trust, morale, and customer empathy.
+- Queen of Diamonds: value design, offer quality, pricing coherence, and profitable packaging.
+- Queen of Spades: systems design, process usability, documentation, and scalability.
+- Queen of Clubs: governance design, policy, constraints, and decision structure.
+
+Queens may be represented by agents, human leaders, or standing operating principles embedded into the business architecture.
+
+## Kings
+
+Kings are authority and accountability roles. They own the final escalation layer for their suit. In an agent-run business, the King can be represented by an agentic office or role, but true liability still escalates to the CEO or authorized human.
+
+- King of Hearts: owns high-stakes relationships and reputational risk.
+- King of Diamonds: owns spend, pricing, runway, and capital risk.
+- King of Spades: owns operational reliability and delivery risk.
+- King of Clubs: owns existential risk, major tradeoffs, and final strategic escalation.
+
+Kings are where the system asks: who has authority, who accepts risk, and who is accountable if this goes wrong?
+
+## Jokers
+
+Jokers are outside the 52-card operating model. They represent wildcards: disruption, opportunity, unknown unknowns, black-swan risk, sudden leverage, or a situation that does not fit the current deck.
+
+Jokers should not be ordinary operating cards. They are special signals that the business architecture may need to adapt.
+
+Possible Joker uses:
+
+- Market shock or unexpected opportunity.
+- Legal, financial, or operational surprise.
+- Breakthrough idea that changes the operating model.
+- Unknown unknown discovered by an agent.
+- Cross-suit issue that cannot be handled cleanly by one card.
+
+The Dealer can introduce a Joker when normal card logic is not enough.
+
+## Master Deck And Sub-Decks
+
+A company should have one master deck that represents the whole business operating system. That master deck can spawn sub-decks for departments, clients, product lines, locations, campaigns, or maturity stages.
+
+The master deck preserves executive coherence. Sub-decks allow local detail.
+
+Examples:
+
+- Master Deck: whole company.
+- Sales Deck: pipeline, offers, relationship motions, and revenue cards.
+- Delivery Deck: SOPs, capacity, quality, and client outcomes.
+- Client Deck: one client relationship and delivery system.
+- Launch Deck: one campaign or product rollout.
+
+Sub-decks should map back to the master deck so the CEO can see how local work affects the whole business.
