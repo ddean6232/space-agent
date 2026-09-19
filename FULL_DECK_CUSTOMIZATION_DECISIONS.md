@@ -142,6 +142,82 @@ Recommended starting widgets:
 
 The visual style should be a command table first, with subtle card-table cues in the background: muted felt green, faint placement marks, restrained card geometry, and a serious executive dashboard foreground.
 
+## Data Population And Business Maturity Model
+
+Dealer's Table must not assume the business already has clean, complete, connected data. A company can enter Full Deck OS at any maturity stage:
+
+- starting from the ground up with little or no formal data
+- operating with scattered notes, spreadsheets, SOPs, emails, calendars, and tribal knowledge
+- partially digitized with some tools and documents but weak structure
+- mature enough to connect live operational systems
+- fully instrumented and ready for optimization
+
+The agents should stimulate and build the data foundation over time. Missing, weak, inaccessible, or non-digital information is not just an inconvenience; it is an operational risk and should create agent work.
+
+Recommended model:
+
+1. Agents assess each business function for available data, source quality, ownership, freshness, structure, and decision usefulness.
+2. Each widget can display confidence and data maturity, not just the visible metric or card.
+3. Missing information becomes a risk when it prevents the OS or CEO from making a reliable decision.
+4. Missing information also becomes an action for agents: find it, request it, digitize it, structure it, validate it, or build a process to keep it current.
+5. The system should support manual entry, agent-maintained records, uploaded files, extracted documents, connected integrations, and later fully live data feeds.
+6. As the business matures, widgets should graduate from manually maintained to connected/live without changing the CEO-facing table metaphor.
+
+This means the opening Dealer's Table can start with partially manual widgets, but every widget should be designed around a future data lifecycle:
+
+- unknown
+- manually entered
+- agent researched
+- document extracted
+- system connected
+- validated
+- monitored
+- optimized
+
+The Risk Profile widget should explicitly include data risks, such as "No current cash forecast," "SOP exists only in someone's head," "Client delivery status is spread across messages," or "Sales pipeline data is stale." These risks should feed agent assignments and decision cards.
+
+## Prioritization And Build Sequencing
+
+Full Deck OS must avoid trying to build the entire business system at once. Discovering many missing processes, weak data sources, stale documents, and disconnected tools should not cause every agent to engage simultaneously.
+
+The operating system needs a priority system that sequences business-system development with the CEO rather than overwhelming them.
+
+Principles:
+
+- The CEO has limited attention, decision capacity, and liability bandwidth.
+- Internal teams may need time to gather records, answer questions, digitize SOPs, or validate agent findings.
+- External systems may require API setup, credentials, vendor access, exports, or integration work.
+- Some missing information is urgent because it blocks high-risk decisions; other missing information can wait.
+- Agent work should be organized into focused operating campaigns, not an unbounded swarm.
+
+Recommended prioritization model:
+
+1. Triage gaps by risk, decision dependency, business value, effort, data availability, and CEO attention required.
+2. Convert the highest-priority gaps into a small active queue of build cards.
+3. Limit concurrent agent campaigns so the CEO sees a manageable number of decisions and requests.
+4. Route information requests to the right human or system owner instead of defaulting every gap to the CEO.
+5. Prefer minimum useful data first, then deepen toward fully connected/live data after the business function is understood.
+6. Re-score priorities as new information arrives, risks change, or agents complete work.
+
+Useful priority labels:
+
+- `critical-now`: blocks an immediate executive decision or exposes serious business risk.
+- `foundation`: needed before later systems or automations can be trusted.
+- `quick-win`: low effort, high clarity, useful for building momentum.
+- `delegate`: needs an internal person or team to gather/validate information.
+- `integrate`: needs an external API, export, credential, or vendor connection.
+- `defer`: known gap, but not worth CEO or agent focus yet.
+
+The Dealer should maintain an active build cadence, such as "next 3 system-building cards," instead of dealing every possible improvement onto the table at once.
+
+This should appear in the starter widgets:
+
+- Decision Required should show only the decisions that truly need CEO authority now.
+- Agent Activity should show active campaigns and paused/deferred campaigns separately.
+- Risk Profile should distinguish urgent operating risks from known-but-deferred data gaps.
+- Dealt Priorities should include the current build queue, not the full backlog.
+- Company Pulse should summarize maturity progress without turning every weakness into an emergency.
+
 ## Implementation Decisions
 
 Phase 1 should change visible brand without deep runtime renames.
